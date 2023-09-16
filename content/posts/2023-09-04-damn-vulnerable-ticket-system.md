@@ -11,7 +11,7 @@ This post contains some of the findings found in the Peppermint.sh ticket applic
 All vulnerabilities were tested on the official latest docker version (which is 0.2 at the time of writing).
 
 
-## Hardcoded Secrets
+## Hardcoded Secrets - CVE-2023-42328
 
 The application users `next-auth` with encrypted JWT session cookies.
 The *secret* is [hardcoded](https://github.com/Peppermint-Lab/peppermint/blob/446a20b870bc68157eaafcb7275c289d76bfb29e/apps/client/pages/api/auth/%5B...nextauth%5D.js#L65)
@@ -94,6 +94,9 @@ http:
           - "password updated success"
 ```
 
+*This bug was reported here: [https://github.com/Peppermint-Lab/peppermint/issues/105](https://github.com/Peppermint-Lab/peppermint/issues/105)*
+
+
 ## Arbitrary File Download
 The attachments of a ticket can be downloaded, without authentication. However, the endpoint is also vulnerable to Path Traversal.
 This allows any unauthenticated attacker to download arbitrary files from the server.
@@ -109,6 +112,7 @@ Since the default docker installation runs as root, you can also download the `/
 
 You may also try to download the `.env` file (`filepath=.env`) from the web root. This file contains the database password.
 
+*This issue was reported here: [https://github.com/Peppermint-Lab/peppermint/issues/108](https://github.com/Peppermint-Lab/peppermint/issues/108). it should be noted, that even if the issue was closed, the issue was still reproducable in the latest docker image (date: 2023-09-04).*
 
 ## Unauthenticated Arbitrary File Upload and Path Traversal
 Any unauthenticated user can create new tickets. In the UI, this endpoint is only accessible after authentication.
@@ -117,6 +121,7 @@ This allows any unauthenticated attacker to receive a RCE by uploading malicious
 
 This also allows stored XSS vulnerabilities, since you can upload SVG or HTML files.
 
+*This bug was reported here: https://github.com/Peppermint-Lab/peppermint/issues/107*
 
 ## Arbitrary File Deletion
 The API allows any user to delete attachments of tickets. The `path` parameter is vulnerable to a Path Traversal which allows any user to delete arbitrary files from the server.
@@ -130,3 +135,5 @@ Host: localhost:5000
 ```
 
 Since the application runs under root by default, it is possible to delete the `/etc/shadow` file.
+
+*This issue was reported here: [https://github.com/Peppermint-Lab/peppermint/issues/106](https://github.com/Peppermint-Lab/peppermint/issues/106). it should be noted, that even if the issue was closed, the issue was still reproducable in the latest docker image (date: 2023-09-04).*
