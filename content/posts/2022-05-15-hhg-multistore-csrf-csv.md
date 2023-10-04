@@ -3,7 +3,7 @@
 title: "H.H.G Multistore <= 5.1.0 - CSRF in CSV File Upload"
 date: 2022-05-15
 draft: false
-authors: ["blockomat"]
+authors: ["blocki"]
 tags: ["advisory"]
 description: "SQL-Injection H.H.G Multistore"
 featuredImage: "/alert.jpg"
