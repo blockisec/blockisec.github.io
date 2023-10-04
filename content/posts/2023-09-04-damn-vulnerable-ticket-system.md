@@ -2,7 +2,7 @@
 title: "Peppermint.sh - A damn vulnerable ticketing system"
 date: 2023-09-04
 draft: false
-authors: ["blockomat"]
+authors: ["blocki"]
 tags: ["advisory"]
 description: "Peppermint.sh - A damn vulnerable ticketing system"
 ---
