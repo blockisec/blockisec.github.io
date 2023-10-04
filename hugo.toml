@@ -1,6 +1,6 @@
 baseURL = 'https://github.com/'
 languageCode = 'en-us'
-title = "blockomat's blog"
+title = "blockisec's blog"
 
 theme = "DoIt"
 
@@ -47,7 +47,7 @@ theme = "DoIt"
   #  site default theme ("light", "dark", "black", "auto")
   defaultTheme = "dark"
   # public git repo url only then enableGitInfo is true
-  gitRepo = "https://github.com/blockomat2100/blockomat2100.github.io"
+  gitRepo = "https://github.com/blockisec/blockisec.github.io"
   #  which hash function used for SRI, when empty, no SRI is used
   # ("sha256", "sha384", "sha512", "md5")
   fingerprint = ""
