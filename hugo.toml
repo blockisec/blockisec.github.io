@@ -1,6 +1,6 @@
 baseURL = 'https://github.com/'
 languageCode = 'en-us'
-title = "blockisec's blog"
+title = "blocki's blog"
 
 theme = "DoIt"
 
@@ -39,7 +39,7 @@ theme = "DoIt"
   #  DoIt theme version
   version = "0.3.X"
   # website title
-  title = "blockisec's blog"
+  title = "blocki's blog"
   # site description
   description = "just another blog"
   # site keywords
