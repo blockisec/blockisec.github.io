@@ -2,7 +2,7 @@
 title: "H.H.G Multistore - SQL-Injection in tID"
 date: 2022-05-05
 draft: false
-authors: ["blockomat"]
+authors: ["blocki"]
 tags: ["advisory"]
 description: "SQL-Injection H.H.G Multistore"
 featuredImage: "/alert.jpg"
